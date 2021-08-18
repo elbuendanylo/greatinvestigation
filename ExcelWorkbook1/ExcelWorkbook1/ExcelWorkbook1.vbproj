@@ -11,15 +11,38 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <DefineConstants>VSTO40</DefineConstants>
     <OfficeApplication>Excel</OfficeApplication>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
-    <BootstrapperComponentsLocation>HomeSite</BootstrapperComponentsLocation>
     <ProjectGuid>{AB925CA0-FB96-476C-9C81-5C5ECCE72189}</ProjectGuid>
     <SolutionID>f18efe6d-dfdf-488e-bc2a-bc911a8f2fb0</SolutionID>
+    <IsWebBootstrapper>False</IsWebBootstrapper>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <PublishUrl>C:\Users\danyl\OneDrive\Escritorio\</PublishUrl>
+    <InstallUrl />
+    <TargetCulture>es</TargetCulture>
+    <ApplicationVersion>1.0.0.2</ApplicationVersion>
+    <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>days</UpdateIntervalUnits>
+    <ProductName>ExcelWorkbook1</ProductName>
+    <PublisherName />
+    <SupportUrl />
+    <FriendlyName>ExcelWorkbook1</FriendlyName>
+    <OfficeApplicationDescription />
   </PropertyGroup>
   <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.VSTORuntime.4.0">
       <Visible>False</Visible>
-      <ProductName>Microsoft Visual Studio 2010 Tools for Office Runtime %28x86 and x64%29</ProductName>
+      <ProductName>Runtime de Microsoft Visual Studio 2010 Tools para Office %28x86 y x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
@@ -122,6 +145,12 @@
     <Import Include="Excel = Microsoft.Office.Interop.Excel" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmgastos.Designer.vb">
+      <DependentUpon>frmgastos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmgastos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frminicio.Designer.vb">
       <DependentUpon>frminicio.vb</DependentUpon>
     </Compile>
@@ -132,6 +161,12 @@
       <DependentUpon>frmMO.vb</DependentUpon>
     </Compile>
     <Compile Include="frmMO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentas.Designer.vb">
+      <DependentUpon>frmVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmVentas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Hoja1.Designer.vb">
@@ -147,11 +182,17 @@
     <Compile Include="ThisWorkbook.vb">
       <DependentUpon>Plantilla.xlsx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmgastos.resx">
+      <DependentUpon>frmgastos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frminicio.resx">
       <DependentUpon>frminicio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMO.resx">
       <DependentUpon>frmMO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentas.resx">
+      <DependentUpon>frmVentas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hoja1.resx">
       <DependentUpon>Hoja1.vb</DependentUpon>
@@ -214,15 +255,18 @@
   <PropertyGroup>
     <ManifestCertificateThumbprint>BB493D9F340A6D6E0F03261481DC75D3E41FBCEB</ManifestCertificateThumbprint>
   </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(VSToolsPath)\OfficeTools\Microsoft.VisualStudio.Tools.Office.targets" Condition="'$(VSToolsPath)' != ''" />
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
-        <ProjectProperties HostName="Plantilla.xlsx" HostPackage="{3F2B7691-D1D1-402F-9370-2704A737CF60}" OfficeVersion="15.0" VstxVersion="4.0" ApplicationType="XLS" Language="VB" TemplatesPath="VSTOTemplates" DebugInfoExeName="C:\Program Files\Microsoft Office\root\Office16\excel.exe" DebugInfoCommandLine="/x &quot;[$OUTPUT]Plantilla.xlsx&quot;" />
-        <Host Name="Excel Document" Path=".\Plantilla.xlsx">
-          <HostItem Name="Hoja1" Code="Hoja1.vb" CanonicalName="Hoja1" DisplayName="Hoja1" Blueprint="Hoja1.Designer.xml" GeneratedCode="Hoja1.Designer.vb" />
-          <HostItem Name="ThisWorkbook" Code="ThisWorkbook.vb" CanonicalName="ThisWorkbook" Blueprint="ThisWorkbook.Designer.xml" GeneratedCode="ThisWorkbook.Designer.vb" />
+        <ProjectProperties HostName="Plantilla.xlsx" HostPackage="{3F2B7691-D1D1-402F-9370-2704A737CF60}" OfficeVersion="15.0" VstxVersion="4.0" ApplicationType="XLS" Language="VB" TemplatesPath="VSTOTemplates" DebugInfoExeName="#Software\Microsoft\Office\15.0\Excel\InstallRoot\Path#excel.exe" DebugInfoCommandLine="/x &quot;[$OUTPUT]Plantilla.xlsx&quot;" />
+        <Host Name="Excel Document" Path=".\Plantilla.xlsx" PublishedHash="D1D6E4258E864B4CE995EE02915F51E9EABD5E14">
+          <HostItem Name="Hoja1" Code="Hoja1.vb" CanonicalName="Hoja1" PublishedHash="5EC3D952EC8CCCA68A22B71C42576B4F241CCCBC" DisplayName="Hoja1" Blueprint="Hoja1.Designer.xml" GeneratedCode="Hoja1.Designer.vb" />
+          <HostItem Name="ThisWorkbook" Code="ThisWorkbook.vb" CanonicalName="ThisWorkbook" PublishedHash="67CC96EE61C2022380542DAF45AC1511EF78460F" Blueprint="ThisWorkbook.Designer.xml" GeneratedCode="ThisWorkbook.Designer.vb" />
         </Host>
       </FlavorProperties>
     </VisualStudio>

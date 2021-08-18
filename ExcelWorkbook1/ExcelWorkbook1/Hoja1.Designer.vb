@@ -21,6 +21,10 @@ Partial Public NotInheritable Class Hoja1
     
     Friend WithEvents Button2 As Microsoft.Office.Tools.Excel.Controls.Button
     
+    Friend WithEvents Button1 As Microsoft.Office.Tools.Excel.Controls.Button
+    
+    Friend WithEvents Button3 As Microsoft.Office.Tools.Excel.Controls.Button
+    
     '''
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>  _
@@ -130,6 +134,8 @@ Partial Public NotInheritable Class Hoja1
      Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>  _
     Private Sub InitializeControls()
         Me.Button2 = New Microsoft.Office.Tools.Excel.Controls.Button(Globals.Factory, Me.ItemProvider, Me.HostContext, "2BD15A44A2C1C324F9B28EAD2BA55F598636E2", "2BD15A44A2C1C324F9B28EAD2BA55F598636E2", Me, "Button2")
+        Me.Button1 = New Microsoft.Office.Tools.Excel.Controls.Button(Globals.Factory, Me.ItemProvider, Me.HostContext, "3FAA5889239F1C34CE93A3F9355C1A2AE64763", "3FAA5889239F1C34CE93A3F9355C1A2AE64763", Me, "Button1")
+        Me.Button3 = New Microsoft.Office.Tools.Excel.Controls.Button(Globals.Factory, Me.ItemProvider, Me.HostContext, "44E49FB7E4A65A440C54A9644C76C004402234", "44E49FB7E4A65A440C54A9644C76C004402234", Me, "Button3")
     End Sub
     
     '''
@@ -143,12 +149,30 @@ Partial Public NotInheritable Class Hoja1
         Me.Button2.BackColor = System.Drawing.SystemColors.Control
         Me.Button2.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Button2.Name = "Button2"
-        Me.Button2.Text = "Mano de Obra"
+        Me.Button2.Text = "Costo de Ventas"
         Me.Button2.UseVisualStyleBackColor = false
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.SystemColors.Control
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Button1.Name = "Button1"
+        Me.Button1.Text = "Ventas"
+        Me.Button1.UseVisualStyleBackColor = false
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.SystemColors.Control
+        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Button3.Name = "Button3"
+        Me.Button3.Text = "Gastos"
+        Me.Button3.UseVisualStyleBackColor = false
         '
         'Hoja1
         '
         Me.Button2.BindingContext = Me.BindingContext
+        Me.Button1.BindingContext = Me.BindingContext
+        Me.Button3.BindingContext = Me.BindingContext
     End Sub
     
     '''

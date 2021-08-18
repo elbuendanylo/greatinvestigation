@@ -38,6 +38,8 @@ Partial Class frminicio
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cb_sectores = New System.Windows.Forms.ComboBox()
         CType(Me.txt_duracion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -65,7 +67,7 @@ Partial Class frminicio
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(42, 177)
+        Me.Label4.Location = New System.Drawing.Point(51, 215)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(92, 13)
         Me.Label4.TabIndex = 4
@@ -73,7 +75,7 @@ Partial Class frminicio
         '
         'btn_empezar
         '
-        Me.btn_empezar.Location = New System.Drawing.Point(44, 210)
+        Me.btn_empezar.Location = New System.Drawing.Point(45, 249)
         Me.btn_empezar.Name = "btn_empezar"
         Me.btn_empezar.Size = New System.Drawing.Size(123, 34)
         Me.btn_empezar.TabIndex = 5
@@ -82,7 +84,7 @@ Partial Class frminicio
         '
         'btn_salir
         '
-        Me.btn_salir.Location = New System.Drawing.Point(211, 210)
+        Me.btn_salir.Location = New System.Drawing.Point(212, 249)
         Me.btn_salir.Name = "btn_salir"
         Me.btn_salir.Size = New System.Drawing.Size(123, 34)
         Me.btn_salir.TabIndex = 6
@@ -98,7 +100,7 @@ Partial Class frminicio
         '
         'txt_duracion
         '
-        Me.txt_duracion.Location = New System.Drawing.Point(140, 175)
+        Me.txt_duracion.Location = New System.Drawing.Point(149, 213)
         Me.txt_duracion.Name = "txt_duracion"
         Me.txt_duracion.Size = New System.Drawing.Size(42, 20)
         Me.txt_duracion.TabIndex = 13
@@ -128,7 +130,7 @@ Partial Class frminicio
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(31, 258)
+        Me.Label5.Location = New System.Drawing.Point(32, 297)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(245, 13)
         Me.Label5.TabIndex = 14
@@ -137,7 +139,7 @@ Partial Class frminicio
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(273, 258)
+        Me.LinkLabel1.Location = New System.Drawing.Point(274, 297)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(70, 13)
         Me.LinkLabel1.TabIndex = 15
@@ -191,16 +193,35 @@ Partial Class frminicio
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(214, 177)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(214, 213)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(111, 20)
         Me.DateTimePicker1.TabIndex = 18
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(83, 183)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(108, 13)
+        Me.Label1.TabIndex = 19
+        Me.Label1.Text = "Sector de la Empresa"
+        '
+        'cb_sectores
+        '
+        Me.cb_sectores.FormattingEnabled = True
+        Me.cb_sectores.Location = New System.Drawing.Point(211, 180)
+        Me.cb_sectores.Name = "cb_sectores"
+        Me.cb_sectores.Size = New System.Drawing.Size(121, 21)
+        Me.cb_sectores.TabIndex = 20
         '
         'frminicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(382, 286)
+        Me.ClientSize = New System.Drawing.Size(384, 319)
+        Me.Controls.Add(Me.cb_sectores)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -241,4 +262,6 @@ Partial Class frminicio
     Friend WithEvents RadioButton3 As RadioButton
     Friend WithEvents RadioButton4 As RadioButton
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Label1 As Label
+    Friend WithEvents cb_sectores As ComboBox
 End Class
